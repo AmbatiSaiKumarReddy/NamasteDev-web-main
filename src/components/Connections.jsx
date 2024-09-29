@@ -39,7 +39,7 @@ const Connections = () => {
 
 
  
-  
+  if(connections.length===0) return <h1>No Connections</h1>
   return (
     <div>
       <h1 className="font-bold text-center mt-4">Connections</h1>

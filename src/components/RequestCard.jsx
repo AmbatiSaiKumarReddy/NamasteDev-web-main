@@ -14,14 +14,9 @@ const RequestCard = (props) => {
     console.log(firstName)
 
     const removeRequestInStore=async(status)=>{
-        if(status==="accepted"){
-            const accepted=await axios.post(BASE_URL+"/request/review/accepted/"+fromUserId._id,{},{withCredentials:true})
-        }
-        else if(status==="rejected"){
-            const rejected=await axios.post(BASE_URL+"/request/review/accepted/"+fromUserId._id,{},{withCredentials:true})
-        }
         
-        dispatch(removeRequests(fromUserId._id))
+            await axios.post(BASE_URL+"/request/review/"+status+"/"+fromUserId._id,{},{withCredentials:true})
+            dispatch(removeRequests(fromUserId._id))
 
     }
 

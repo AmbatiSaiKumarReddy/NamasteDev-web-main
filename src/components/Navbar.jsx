@@ -22,6 +22,9 @@ const Navbar = () => {
     <div className="flex-1">
       <Link to="/" className="btn btn-ghost text-xl">DevMatch</Link>
     </div>
+    <Link to="/profile">Test Profile</Link>
+    <Link to="/requests">Test Requests</Link>
+    <Link to="/connections">Test Connections</Link>
     {userData &&
     <div className="flex-none gap-2">
 
